@@ -13,12 +13,21 @@
 </head>
 <body>
 <h1>MotorJam Racer – Privacy Policy</h1>
-<p class="date">Effective October 24, 2026 (in-app purchases added)</p>
+<p class="date">Effective October 25, 2026 (Google Play Games sign-in and online points added)</p>
 
 <p>MotorJam Racer is a game for Android, suitable for players aged 9 and up. This policy explains what happens to your information when you play it.</p>
 
 <h2>What we collect</h2>
-<p>Nothing. The game does not collect, store on a server, or sell any personal information. It has no accounts, no ads, no analytics and no tracking. Everything you do in single-player stays on your phone, and single-player doesn't use the internet at all.</p>
+<p>Very little, and never anything that names you. The game has no ads, no analytics and no tracking, and we never sell anything. Single-player needs no internet. If you sign in with <b>Google Play Games</b> (below), our service keeps your Play Games player ID with your online points and a copy of your game progress. That's all.</p>
+
+<h2>Google Play Games sign-in</h2>
+<p>The game signs in to Google Play Games so your progress is safe and online races are fair. Signing in is needed only for online races; single-player works without it.</p>
+<ul>
+  <li><b>What we keep.</b> Our service (on Cloudflare) keeps, under your Google Play Games player ID: your <b>online points</b>, the <b>results of your online races</b> (who won each race), and a <b>copy of your game progress</b> (stars, coins, records, unlocked roads and bikes, purchases). We don't keep your name, your email, your Play Games display name, or the nickname you type for online races.</li>
+  <li><b>Why.</b> So a reinstall or a new phone gets your progress back, and so online points can't be faked: our service, not the phone, decides each online race and keeps the count.</li>
+  <li><b>How.</b> When you sign in, the game sends our service a one-time code from Google, which our service exchanges with Google for your Play Games player ID. Google processes the sign-in under <a href="https://policies.google.com/privacy">its own privacy policy</a>.</li>
+  <li><b>How long.</b> Until you ask us to delete it: see <a href="delete.html">Deleting your data</a>.</li>
+</ul>
 
 <h2>Online races</h2>
 <p>If you choose <b>ONLINE</b> to race another player, the game connects to the internet, and only then:</p>
@@ -27,7 +36,8 @@
   <li><b>The race.</b> Once paired, your phone connects directly to the other rider's phone, so each phone sees the other's IP address. If a direct connection isn't possible, the race data goes through a relay instead: a TURN relay service (<a href="https://www.expressturn.com/">ExpressTURN</a>) or our own relay on Cloudflare. A relay only passes the race messages between the two phones and keeps nothing. What's exchanged: the bike you ride, its position and speed during the race, and your finish time. No names, no chat, no photos, no accounts.</li>
   <li><b>Counts, not people.</b> The matchmaking service keeps anonymous counts so we can see whether online play works and stays within its limits: how many races were matched, how long riders waited, how races connected, and how many requests were refused. These records hold no IP address, no device identifier and nothing else that could identify a player.</li>
   <li><b>Finding the service.</b> If the game can't reach the matchmaking service, it reads a small settings file from our website (hosted on GitHub Pages) that says where the service is now. That request, like any web request, reveals your IP address to GitHub; nothing else is sent.</li>
-  <li>Online results are not saved anywhere, not even in your career.</li>
+  <li><b>Your nickname.</b> The name you type on the ONLINE page is sent to the other rider for that race (it's shown over your bike). It's kept on your phone, not by us.</li>
+  <li><b>Results.</b> Both phones tell our service who won; it decides the race and changes the two riders' online points (see Google Play Games sign-in, above).</li>
 </ul>
 
 <h2>In-app purchases</h2>
@@ -42,20 +52,24 @@
 <p>We may give someone a personal code that unlocks every road and bike. Redeeming it sends only the code to our service (on Cloudflare), which checks it and counts how many times it has been used. Nothing else about you or your phone is sent or kept.</p>
 
 <h2>What stays on your device</h2>
-<p>Your game progress and settings (stars, coins, unlocked roads and bikes, purchases, best times, and options such as the music volume) are saved in the app's private storage on your phone. They never leave the device. Uninstalling the game deletes them.</p>
+<p>Your game progress and settings (stars, coins, unlocked roads and bikes, purchases, best times, and options such as the music volume) are saved in the app's private storage on your phone. Settings never leave the device. When you're signed in to Google Play Games, a copy of your progress is also kept by our service (above).</p>
 
 <h2>Permissions</h2>
-<p>The game uses vibration for haptic feedback, and may read the phone's motion sensors if you choose tilt steering. Sensor readings are used only while you play and are not stored or sent anywhere. It uses the internet only for online races, checking purchases and unlock codes (above).</p>
+<p>The game uses vibration for haptic feedback, and may read the phone's motion sensors if you choose tilt steering. Sensor readings are used only while you play and are not stored or sent anywhere. It uses the internet only for Google Play Games sign-in and its copy of your progress, online races, checking purchases and unlock codes (above).</p>
 
 <h2>Children</h2>
-<p>MotorJam Racer is made for players aged 9 and up, including children under 13, and it collects no personal information from anyone. In particular:</p>
+<p>MotorJam Racer is made for players aged 9 and up, including children under 13. In particular:</p>
 <ul>
-  <li>There are no accounts, names, profiles, contact details, photos, location, advertising identifiers, ads, analytics or tracking.</li>
+  <li>We don't collect names, contact details, photos, location or advertising identifiers, and there are no ads, analytics or tracking.</li>
+  <li>The only identifier we keep is the Google Play Games player ID, used only to run the game: keeping the player's progress and online points, and keeping online races fair. It is never used for advertising, profiling or anything else, and never shared.</li>
   <li>Purchases are optional and always go through Google Play, which asks for the account holder's approval (with Google Family Link, a parent can require it for every purchase). The game never pressures players to buy: nothing is timed, nothing expires, and every road and bike can also be earned by playing.</li>
-  <li>Online races are optional. Players can't talk to each other: there is no chat, no voice, no messages and nothing a player can write or upload. All another player ever sees is a bike racing on the same track.</li>
-  <li>The only data an online race involves is the connection data described above (the IP address), which is used for that moment only and not stored by us.</li>
+  <li>Online races are optional. Players can't talk to each other: there is no chat, no voice and no messages. All another player sees is a bike racing on the same track and the short nickname its rider chose.</li>
+  <li>An online race also involves the connection data described above (the IP address), used for that moment only and not stored by us.</li>
 </ul>
-<p>Because we hold no data about any player, there is nothing for us to look up, export or delete. Parents with any question can contact us at the address below.</p>
+<p>A parent can ask us to delete a player's data at any time: see <a href="delete.html">Deleting your data</a>, or contact us at the address below.</p>
+
+<h2>Deleting your data</h2>
+<p>See <a href="delete.html">Deleting your data</a>: how to ask, what's deleted and what's kept.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version will be posted at this address with a new effective date.</p>
