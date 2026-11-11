@@ -44,9 +44,15 @@
   var intent = "intent://details?id=" + id + "&referrer=" + referrer +
     "#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
   // one anonymous visit count for the admin panel (net.jackofall.app/admin): the page, the campaign tags, nothing else
+  // (u=1: this browser's first visit today -- the date is kept here, in this page's own storage; nothing identifies it)
+  var u = 1;
+  try {
+    var today = new Date().toISOString().slice(0, 10);
+    if (localStorage.getItem("mj_seen") === today) u = 0; else localStorage.setItem("mj_seen", today);
+  } catch (e) {}
   try {
     var hit = "https://net.jackofall.app/hit?page=get&c=" + encodeURIComponent(q.get("utm_campaign") || "") +
-      "&s=" + encodeURIComponent(q.get("utm_source") || "tiktok");
+      "&s=" + encodeURIComponent(q.get("utm_source") || "tiktok") + "&u=" + u;
     if (!(navigator.sendBeacon && navigator.sendBeacon(hit))) { fetch(hit, { method: "POST", mode: "no-cors", keepalive: true }); }
   } catch (e) {}
   var go = document.getElementById("go");
