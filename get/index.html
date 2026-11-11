@@ -43,9 +43,15 @@
   var android = /Android/i.test(navigator.userAgent);
   var intent = "intent://details?id=" + id + "&referrer=" + referrer +
     "#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+  // one anonymous visit count for the admin panel (net.jackofall.app/admin): the page, the campaign tags, nothing else
+  try {
+    var hit = "https://net.jackofall.app/hit?page=get&c=" + encodeURIComponent(q.get("utm_campaign") || "") +
+      "&s=" + encodeURIComponent(q.get("utm_source") || "tiktok");
+    if (!(navigator.sendBeacon && navigator.sendBeacon(hit))) { fetch(hit, { method: "POST", mode: "no-cors", keepalive: true }); }
+  } catch (e) {}
   var go = document.getElementById("go");
   go.href = android ? intent : web;
-  if (android) { setTimeout(function () { location.href = intent; }, 150); }
+  if (android) { setTimeout(function () { location.href = intent; }, 250); }
 })();
 </script>
 </body>
